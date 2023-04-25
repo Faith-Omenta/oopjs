@@ -26,7 +26,7 @@ const products = [
   { name: 'Shoes', price: 60, category: 'Clothing' },
 ];
 
-const myProduct=product.reduce((group,arr)=>{
+const myProducts=product.reduce((group,arr)=>{
     const{category}=arr;
     group[category]=group[category]??[];
     group[category].push(arr);
@@ -48,9 +48,9 @@ const students = [
 function average(){
     let average=[]
     for(let i=0; i<students.length; i++){
-        let average=student[i].score.reduce((total,next)=>total+next)/student[i].scores.length;
+        let average=students[i].scores.reduce((total,next)=>total+next)/students[i].scores.length;
         if(average>=85){
-            averageScore.push(student[i].names)
+            averageScore.push(students[i].name)
         }
     }
     return averageScore
@@ -69,7 +69,7 @@ const car = {
   displayInfo: function() {
 console.log(`Make: ${this.make}, Model: ${this.model}, Year: ${this.year}`);},};
 
- functioncarage(currrentYear){
+ function carage(currentYear){
     car.age=currentYear-car["Year"]
  }
  CacheStorage(2024)
